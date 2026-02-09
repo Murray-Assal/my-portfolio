@@ -12,24 +12,80 @@ body {
 }
 
 .background-color {
-    position:relative;
+    position:absolute;
     background-color: rgb(55, 143, 176);
-    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 50vh;
+    width: 100%;
+    transform: skewY(-12deg) translateY(-33%);
+    z-index: -1;
 }
 
 main {
-    position:absolute;
     flex-grow: 1;
+    z-index: 1;
+}
+
+.profile-container {
+    margin:5% 0% 5% 10%;
+    display:flex;
+}
+
+.profile-image {
+    /* width: 464px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-me-container {
+    box-sizing: border-box;
+    background-color: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-self:center;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 606.4px;
+    height: 412px;
+    padding: 25px;
 }
 
 .header-text {
     font-family: "Playfair Display";
-    font-size: 36px;
+    font-size: 48px;
+}
+
+.summary {
+    font-size: 24px;
+    color:rgb(78, 78, 77);
+}
+
+.contact-me {
+    align-self:flex-end;
 }
 
 .project-flexbox {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing:border-box;
+    height:510.4px;
+    width:422.4px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-description {
+    margin: 0px 0px 0px 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .contact-icon {
@@ -38,15 +94,20 @@ main {
 }
 
 .links {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+    margin-right:auto;
 }
 
 footer {
+    /* position: absolute; */
     background-color: rgb(55, 143, 176);
     color:white;
     display:flex;
     justify-content: space-evenly;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .footer-contact-icon {
