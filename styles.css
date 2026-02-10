@@ -15,19 +15,21 @@ body {
     position:absolute;
     background-color: rgb(55, 143, 176);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: 50vh;
+    height: 100%;
     width: 100%;
     transform: skewY(-12deg) translateY(-33%);
     z-index: -1;
 }
 
 main {
+    max-width: 1443.25px;
+    margin:auto;
     flex-grow: 1;
     z-index: 1;
 }
 
 .profile-container {
-    margin:5% 0% 5% 10%;
+    margin:5% 0% 5% 0%;
     display:flex;
 }
 
@@ -44,9 +46,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    width: 606.4px;
-    height: 412px;
-    padding: 25px;
+    width: 758px;
+    height: 516px;
+    padding: 30px;
 }
 
 .header-text {
@@ -55,7 +57,8 @@ main {
 }
 
 .summary {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 1.5;
     color:rgb(78, 78, 77);
 }
 
@@ -104,10 +107,21 @@ footer {
     background-color: rgb(55, 143, 176);
     color:white;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
     bottom: 0;
     width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
     z-index: 1;
+}
+
+.contact-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size:26px;
+    max-width:450px;
 }
 
 .footer-contact-icon {
