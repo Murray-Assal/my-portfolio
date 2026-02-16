@@ -17,6 +17,11 @@ body {
     font-family: "Roboto";
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .background-color {
     position:absolute;
     background-color: rgb(55, 143, 176);
@@ -80,6 +85,16 @@ main {
     align-self:flex-end;
 }
 
+.contact-icon {
+    height: 30px;
+    width: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: translateY(-2px);
+}
+
 .project-flexbox {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -95,6 +110,12 @@ main {
     justify-content: center;
     margin-top: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+}
+
+.project-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-5px);
 }
 
 .project-name {
@@ -114,11 +135,6 @@ main {
 .project-description-text {
     font-size: 1.5vw;
     color:rgb(78, 78, 77);
-}
-
-.contact-icon {
-    height: 30px;
-    width: 30px;
 }
 
 .links {
@@ -163,7 +179,12 @@ footer {
 .footer-contact-icon {
     height: 50px;
     width: 50px;
+    transition: all 0.3s ease;
 }
+.footer-contact-icon:hover {
+    transform: translateY(-2px);
+}
+
 .footer-image {
     object-fit: cover;
 }
@@ -256,7 +277,7 @@ footer {
         width: 40vw;
     }
     .header-text {
-        font-size: 7vw;
+        font-size: 5vw;
     }
     .footer-text {
         font-size: 2.344vw;
