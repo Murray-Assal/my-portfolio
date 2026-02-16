@@ -144,6 +144,16 @@ footer {
     max-width:450px;
 }
 
+.phone {
+    display: flex;
+    gap: 10px;
+}
+
+.email {
+    display: flex;
+    gap: 10px;
+}
+
 .footer-contact-icons-container {
     gap: 20px;
     justify-content: start;
