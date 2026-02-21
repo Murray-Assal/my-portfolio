@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding:0;
     margin:0;
+}
+
+:root {
+    --background-color: #fefefe;
+    --primary-color: rgb(55, 143, 176);
+    --description-text: rgb(78, 78, 77);
+    --text: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(22, 32, 42);
+        --primary-color: rgb(41, 106, 130);
+        --description-text: rgb(200, 200, 200);
+        --text: white;
+    }
 }
 
 body, .profile-container, .about-me-container, .project-flexbox, .project-container, footer, .contact-information, .footer-contact-icons-container {
@@ -15,6 +32,7 @@ body, .about-me-container, .project-container, .contact-information {
 
 body {
     font-family: "Roboto";
+    background-color: var(--background-color);
 }
 
 a {
@@ -24,7 +42,7 @@ a {
 
 .background-color {
     position:absolute;
-    background-color: rgb(55, 143, 176);
+    background-color: var(--primary-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     height: 100%;
     width: 100%;
@@ -45,7 +63,6 @@ main {
 }
 
 .profile-image {
-    /* width: 464px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -61,7 +78,7 @@ main {
 
 .about-me-container {
     box-sizing: border-box;
-    background-color: #fefefe;
+    background-color: var(--background-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-self:center;
     gap: 35px;
@@ -73,12 +90,13 @@ main {
 .header-text {
     font-family: "Playfair Display";
     font-size: 48px;
+    color: var(--text);
 }
 
 .summary {
     font-size: 26px;
     line-height: 1.5;
-    color:rgb(78, 78, 77);
+    color: var(--description-text);
 }
 
 .contact-me {
@@ -88,6 +106,7 @@ main {
 .contact-icon {
     height: 30px;
     width: 30px;
+    fill: var(--text);
     transition: all 0.3s ease;
 }
 
@@ -106,11 +125,12 @@ main {
     box-sizing:border-box;
     height:510.4px;
     width:422.4px;
-    align-items: center;
-    justify-content: center;
     margin-top: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: var(--text);
     transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-container:hover {
@@ -123,6 +143,7 @@ main {
     font-size: 2vw;
     font-weight: 500;
     margin-bottom: 20px;
+    color: var(--text);
 }
 
 .project-description {
@@ -134,18 +155,19 @@ main {
 
 .project-description-text {
     font-size: 1.5vw;
-    color:rgb(78, 78, 77);
+    color: var(--description-text);
 }
 
 .links {
     height: 30px;
     width: 30px;
     margin-right:auto;
+    fill: var(--text);
 }
 
 footer {
-    background-color: rgb(55, 143, 176);
-    color:white;
+    background-color: var(--primary-color);
+    color: white;
     justify-content: space-around;
     align-items: center;
     width: 100%;
